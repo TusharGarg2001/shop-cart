@@ -1,0 +1,64 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.searchInput {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: rgb(255, 241, 225);
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5vw;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.cardHoverDark:hover {
+  border-color: #ffffff !important;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .expandedProduct{
+    flex-direction: column !important;
+    padding: 10px !important;
+  }
+}

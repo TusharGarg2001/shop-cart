@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Provider, useSelector } from 'react-redux';
+import store from './redux/Store';
+import Layout from './components/Layout';
+import Login from './components/Login';
+import UserHome from './components/UserHome';
+import AdminDashboard from './components/AdminDashboard';
+import Cart from './components/Cart';
+import RedirectRoute from './components/RedirectRoute';
+import UserDetails from './components/UserDetails';
 import './App.css';
+import NotFound from './components/WrongPath';
+
+const PrivateRoute = ({ element, adminRoute, ...rest }) => {
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  const role = useSelector(state => state.auth.user?.role);
+
+  if (!isAuthenticated) {
+    return <Navigate to="/" />;
+  }
+
+  if (adminRoute && role !== 'admin') {
+    return <Navigate to="/home" />;
+  }
+
+  return element;
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<RedirectRoute element={<Login />} />} />
+          <Route path="/home" element={<Layout />}>
+            <Route index element={<UserHome />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="user-details" element={<UserDetails />} />
+            <Route path="admin" element={<PrivateRoute adminRoute element={<AdminDashboard />} />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </Provider>
   );
 }
 

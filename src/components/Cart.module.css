@@ -1,0 +1,72 @@
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.mainContainer {
+  min-height: 90vh;
+  padding: 20px;
+}
+
+.cartHeading {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.removeButton {
+  background-color: #ff4d4f;
+  color: #fff;
+  border-color: #ff4d4f;
+}
+
+.removeButton:hover {
+  background-color: #ff7875;
+  border-color: #ff7875;
+}
+
+.cartTotal {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: right;
+}
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.formContainer {
+  flex: 1;
+  padding-left: 20px; 
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundImage {
+  width: 100%; 
+  max-width: 500px; 
+  max-height: 500px; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+
+@media screen and (max-width: 425px) {
+  .modalContent {
+    flex-direction: column-reverse !important;
+  }
+}
+
+
+
+

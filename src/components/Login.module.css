@@ -1,0 +1,37 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../public/login-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.loginBox {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 25vw;
+  color: black;
+  transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; 
+ 
+}
+
+.loginBox:hover {
+  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); 
+}
+
+
+
+@media screen and (max-width: 425px) {
+  .loginBox {
+    width: 70vw; 
+  }
+}
+

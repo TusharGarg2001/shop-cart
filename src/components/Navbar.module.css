@@ -1,0 +1,61 @@
+ .navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001529;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 50vw;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .userName {
+    margin-left: 8px;
+    color: #afaeae;
+    font-size: 15px;
+  }
+
+  .userName:hover {
+    color: #ffffff;  
+  }
+
+  .option:hover{color: #ffffff;}
+
+  .cart{
+    font-size:15px ;
+    color: #afaeae;
+    
+  }
+
+  .cart:hover{color: #ffffff;}
+
+  .arrow:hover{
+    color: #ffffff;
+
+  }
+  
+  .arrow{
+    color: #afaeae;
+    font-size: 20px;
+
+  }
