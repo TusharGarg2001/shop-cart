@@ -31,7 +31,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={<RedirectRoute element={<Login />} />} />
+          <Route path="/ShopCart/" element={<RedirectRoute element={<Login />} />} />
           <Route path="/home" element={<Layout />}>
             <Route index element={<UserHome />} />
             <Route path="cart" element={<Cart />} />
