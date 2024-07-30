@@ -43,7 +43,6 @@ const UserHome = () => {
   const searchTerm = useSelector((state) => state.search.searchTerm);
   const currentTheme = useSelector((state) => state.theme.theme);
   const user = useSelector((state) => state.auth.user);
-
   const [expandedProduct, setExpandedProduct] = useState(null);
 
   useEffect(() => {

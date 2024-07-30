@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { logout, loginSuccess } from '../redux/action/authAction';
 import { setSearchTerm } from '../redux/action/searchAction';
 import { changeTheme } from '../redux/action/themeAction';
-import { Layout, Menu, Input, Button, Badge, Dropdown, Avatar ,ConfigProvider} from 'antd';
+import { Layout, Menu, Input, Badge, Dropdown, Avatar ,ConfigProvider} from 'antd';
 import { UserOutlined, ShoppingCartOutlined, HomeOutlined, SearchOutlined, ArrowLeftOutlined, BgColorsOutlined, LogoutOutlined, ProfileOutlined } from '@ant-design/icons';
 import styles from './Navbar.module.css';
 
