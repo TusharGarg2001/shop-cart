@@ -29,10 +29,10 @@ const PrivateRoute = ({ element, adminRoute, ...rest }) => {
 function App() {
   return (
     <Provider store={store}>
-      <Router basename="/ShopCart">
+      <Router>
         <Routes>
-          <Route path="/ShopCart/" element={<RedirectRoute element={<Login />} />} />
-          <Route path="/ShopCart/home" element={<Layout />}>
+          <Route path="/" element={<RedirectRoute element={<Login />} />} />
+          <Route path="/home" element={<Layout />}>
             <Route index element={<UserHome />} />
             <Route path="cart" element={<Cart />} />
             <Route path="user-details" element={<UserDetails />} />
