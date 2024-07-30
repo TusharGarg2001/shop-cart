@@ -5,8 +5,6 @@ import { updateCredential, addUser } from '../redux/action/authAction';
 import { loginRequest } from '../redux/action/authAction';
 import styles from './AdminDashboard.module.css'
 import {UserAddOutlined } from '@ant-design/icons';
-
-
 const AdminDashboard = () => {
   const [isAddUserModalVisible, setAddUserModalVisible] = useState(false);
   const [editUser, setEditUser] = useState(null);
