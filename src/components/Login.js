@@ -41,7 +41,7 @@ const Login = () => {
         
       
       <div className={styles.loginBox}>
-      <h3 style={{fontFamily:'cursive'}}> Welcome To ShopCart!</h3>
+      <h3 style={{fontFamily:'cursive'}}> Welcome to ShopCart!</h3>
      
     
         <Form layout="vertical" onFinish={handleSubmit}>
